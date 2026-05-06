@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEAL_DATABASE_2026</title>
+    <script src="https://tailwindcss.com"></script>
+    <style>
+        /* Custom "Raw" Styles */
+        .meal-card { border: 1px solid #000; transition: all 0.3s ease; }
+        .meal-card:hover { background-color: #000; color: #fff; }
+        .meal-card img { filter: grayscale(100%); transition: 0.3s; border-bottom: 1px solid #000; }
+        .meal-card:hover img { filter: grayscale(0%); }
+        .meal-card:hover a { color: #fff; border-color: #fff; }
+    </style>
+</head>
+<body class="bg-white text-black antialiased font-mono">
+
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-baseline mb-16 border-b-4 border-black pb-4">
+            <div>
+                <h1 class="text-5xl font-black tracking-tighter uppercase">Recipes</h1>
+                <p class="text-xs mt-2 font-bold text-gray-500">API_ENDPOINT: /PUBLIC/MEALS</p>
+            </div>
+            <button id="update-btn" class="mt-4 md:mt-0 border-2 border-black px-8 py-2 font-black uppercase hover:bg-black hover:text-white transition-all active:scale-95">
+                Refresh_List
+            </button>
+        </header>
+
+        <!-- Grid Container -->
+        <div id="meal-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+            <!-- Content Injected by script.js -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
